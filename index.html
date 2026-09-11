@@ -244,19 +244,30 @@
         .group-line { font-size: 0.85rem; color: #6B644C; }
         .group-line strong { color: var(--ink); font-weight: 700; }
 
-        .member-badge {
-            background: var(--paper-dim);
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin-top: 10px;
-        }
-        .member-badge i { color: var(--coral); }
+       .member-badge {
+    background: var(--paper-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-top: 10px;
+}
+
+.member-badge strong {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #201A3D;
+    letter-spacing: 0.2px;
+}
+
+.member-badge i {
+    color: var(--coral);
+    font-size: 0.95rem;
+}
 
         /* ---------- Features ---------- */
         .features {
@@ -336,15 +347,18 @@
 
         <div class="perforation"></div>
 
-        <div class="stub">
-            <div class="group-line">গিভওয়েতে দিচ্ছে: <strong>ATZ COMMUNITY</strong></div>
-            <!-- 🔴 সত্যিকারের মেম্বার সংখ্যা বসাও, ফলস ক্লেইম দিলে অ্যাড রিভিউ রিজেক্ট হতে পারে -->
-            <div class="member-badge"><i class="fas fa-users"></i> ১০,২০০+ সদস্য</div>
-        </div>
+    <div class="stub">
+    <div class="group-line">গিভওয়েতে দিচ্ছে: <strong>ATZ COMMUNITY</strong></div>
 
-        <div class="perforation"></div>
+    <div class="member-badge">
+        <i class="fas fa-users"></i>
+        <span><strong>১০,২০০+</strong> সদস্য</span>
+    </div>
+</div>
 
-        <div class="features">
+<div class="perforation"></div>
+
+<div class="features">
             <div class="feat-item"><i class="fas fa-chart-line"></i><span>মার্কেট আপডেট</span></div>
             <div class="feat-item"><i class="fas fa-clock"></i><span>২৪/৭ কমিউনিটি</span></div>
             <div class="feat-item"><i class="fas fa-lock"></i><span>প্রাইভেট গ্রুপ</span></div>
