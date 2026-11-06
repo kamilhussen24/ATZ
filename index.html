@@ -2,15 +2,15 @@
 <html lang="bn">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>১০টি ল্যাপটপ গিভওয়ে - জয়েন করুন</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ATZ COMMUNITY - টেলিগ্রামে জয়েন করুন</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Bengali Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -22,7 +22,7 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '4554089494919844'); // 🔴 এখানে তোমার আসল Pixel ID বসাও
+        fbq('init', '4554089494919844'); // Replace with your Pixel ID
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
@@ -31,360 +31,294 @@
     <!-- End Meta Pixel Code -->
 
     <style>
-        :root{
-            --ink: #201A3D;
-            --paper: #FFF9EC;
-            --paper-dim: #FCEFC7;
-            --gold: #F0A93E;
-            --gold-deep: #C9791A;
-            --teal: #12A594;
-            --coral: #FF6B5B;
-            --violet-a: #3A1E68;
-            --violet-b: #12102B;
+        :root {
+            --bg-a: #0B1220;
+            --bg-b: #0F1B33;
+            --card: #FFFFFF;
+            --ink: #0F172A;
+            --muted: #64748B;
+            --line: #E8EDF4;
+            --soft: #F3F7FC;
             --tg-a: #229ED9;
-            --tg-b: #37AEE2;
+            --tg-b: #2AABEE;
+            --green: #16A34A;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             min-height: 100vh;
+            min-height: 100dvh;
             background:
-                radial-gradient(90% 60% at 50% 0%, var(--violet-a) 0%, var(--violet-b) 55%, #0A0918 100%);
+                radial-gradient(70% 45% at 50% 0%, rgba(42, 171, 238, 0.28) 0%, transparent 70%),
+                linear-gradient(180deg, var(--bg-b) 0%, var(--bg-a) 100%);
             font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.5;
+            color: var(--ink);
             display: flex;
             align-items: center;
-            padding: 40px 0 56px;
-            overflow-x: hidden;
+            justify-content: center;
+            padding: 32px 16px 40px;
         }
 
-        .main {
-            max-width: 460px;
+        .card {
             width: 100%;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-        }
-
-        /* ---------- Confetti scatter ---------- */
-        .confetti {
-            position: absolute;
-            pointer-events: none;
-            opacity: 0.9;
-        }
-        .confetti.dot { border-radius: 50%; }
-        .confetti.sq { border-radius: 3px; }
-        .confetti.tri {
-            width: 0; height: 0;
-            border-left: 7px solid transparent;
-            border-right: 7px solid transparent;
-        }
-        .c1 { top: -6px; left: 6%; width: 10px; height: 10px; background: var(--teal); transform: rotate(12deg); }
-        .c2 { top: 30px; right: 2%; width: 8px; height: 8px; background: var(--coral); }
-        .c3 { top: 90px; left: -8px; width: 12px; height: 12px; background: var(--gold); transform: rotate(-16deg); }
-        .c4 { bottom: 60px; right: -6px; width: 11px; height: 11px; background: var(--teal); transform: rotate(30deg); }
-        .c5 { bottom: 18px; left: 4%; width: 9px; height: 9px; background: var(--coral); }
-        .c6 { top: 55%; right: 6%; border-bottom: 12px solid var(--gold); }
-        .c7 { top: 8%; left: 32%; border-bottom: 10px solid var(--teal); opacity: 0.6; }
-
-        /* ---------- Ticket card ---------- */
-        .ticket {
-            position: relative;
-            background: var(--paper);
-            border-radius: 20px 20px 28px 28px;
-            box-shadow:
-                0 26px 60px rgba(5, 5, 20, 0.55),
-                0 2px 0 rgba(255,255,255,0.5) inset;
+            max-width: 420px;
+            background: var(--card);
+            border-radius: 22px;
+            box-shadow: 0 24px 60px rgba(2, 6, 23, 0.5);
+            overflow: hidden;
             opacity: 0;
-            transform: translateY(14px) scale(0.98);
-            animation: issueTicket 0.65s cubic-bezier(.2,.8,.2,1) 0.1s forwards;
+            transform: translateY(12px);
+            animation: rise 0.55s cubic-bezier(.2,.8,.2,1) 0.05s forwards;
         }
-        @keyframes issueTicket {
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
+        @keyframes rise { to { opacity: 1; transform: none; } }
 
-        .ticket-top {
-            padding: 32px 26px 6px;
+        /* ---------- Header ---------- */
+        .head {
+            padding: 30px 24px 22px;
             text-align: center;
         }
 
-        .prize-wrap {
+        .avatar {
             position: relative;
-            width: 132px;
-            height: 132px;
-            margin: 0 auto 16px;
-        }
-        .prize-glow {
-            position: absolute;
-            inset: -14px;
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 14px;
             border-radius: 50%;
-            background: conic-gradient(from 0deg, var(--gold), var(--coral), var(--teal), var(--gold));
-            filter: blur(2px);
-            opacity: 0.55;
-            animation: spinGlow 6s linear infinite;
-        }
-        @keyframes spinGlow { to { transform: rotate(360deg); } }
-
-        .prize-badge {
-            position: absolute;
-            inset: 7px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 32% 28%, #FBDE93, var(--gold) 55%, var(--gold-deep) 100%);
+            background: linear-gradient(135deg, var(--tg-a), var(--tg-b));
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 20px rgba(201, 121, 26, 0.45);
+            color: #fff;
+            font-size: 2rem;
+            box-shadow: 0 10px 24px rgba(34, 158, 217, 0.35);
         }
-        .prize-badge .num {
-            font-family: 'Tiro Bangla', serif;
-            font-size: 2.7rem;
+        .avatar::after {
+            content: "";
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            border: 2px solid rgba(42, 171, 238, 0.25);
+        }
+
+        .name {
+            font-size: 1.45rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            line-height: 1.2;
+        }
+
+        .live {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
             line-height: 1;
-            color: var(--ink);
+            color: var(--green);
         }
-        .prize-badge .unit {
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--ink);
-            margin-top: 2px;
-        }
-        .prize-wrap i.laptop-mark {
-            position: absolute;
-            bottom: 2px;
-            right: 2px;
-            width: 36px;
-            height: 36px;
+        .live .dot {
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            background: var(--ink);
-            color: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+            background: var(--green);
+            box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5);
+            animation: pulse 1.8s infinite;
+        }
+        @keyframes pulse {
+            70% { box-shadow: 0 0 0 7px rgba(22, 163, 74, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
         }
 
-        .headline {
-            font-family: 'Tiro Bangla', serif;
-            font-size: 1.5rem;
-            color: var(--ink);
-            margin-bottom: 18px;
-            letter-spacing: 0.2px;
+        .tagline {
+            margin: 12px auto 0;
+            max-width: 300px;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        /* ---------- Stats ---------- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 0 24px;
+            background: var(--soft);
+            border-radius: 14px;
+            padding: 12px 0;
+        }
+        .stat { text-align: center; }
+        .stat + .stat { border-left: 1px solid var(--line); }
+        .stat b {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .stat span {
+            font-size: 0.75rem;
+            color: var(--muted);
         }
 
         /* ---------- CTA ---------- */
-        .cta-wrap { padding: 0 26px 18px; }
+        .cta { padding: 20px 24px 6px; }
 
         .join-btn {
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--tg-a) 0%, var(--tg-b) 100%);
-            border: none;
-            padding: 16px 28px;
-            border-radius: 14px;
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-size: 1.14rem;
-            font-weight: 700;
-            color: white;
-            cursor: pointer;
             width: 100%;
+            padding: 15px 20px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--tg-a), var(--tg-b));
+            color: #fff;
+            font-size: 1.08rem;
+            font-weight: 700;
+            line-height: 1;
             text-decoration: none;
-            box-shadow: 0 12px 24px rgba(34, 158, 217, 0.4), 0 0 0 3px rgba(240,169,62,0.35);
+            box-shadow: 0 10px 22px rgba(34, 158, 217, 0.35);
+            -webkit-tap-highlight-color: transparent;
         }
-        .join-btn i.fa-telegram-plane { font-size: 1.25rem; }
-        .join-btn:hover { filter: brightness(1.04); }
-        .join-btn:active { transform: scale(0.98); transition: 0.05s; }
+        .join-btn i {
+            font-size: 1.2rem;
+            line-height: 1;
+            display: flex;
+        }
+        .join-btn:hover { filter: brightness(1.05); }
+        .join-btn:active { transform: scale(0.985); }
         .join-btn .shine {
             position: absolute;
             top: 0; left: -60%;
             width: 40%; height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
             transform: skewX(-20deg);
-            animation: sweep 2.8s ease-in-out infinite;
+            animation: sweep 3s ease-in-out infinite;
         }
         @keyframes sweep {
             0% { left: -60%; }
-            35% { left: 130%; }
-            100% { left: 130%; }
+            35%, 100% { left: 130%; }
         }
 
-        .subtext {
-            font-size: 0.9rem;
-            color: #55506E;
-            max-width: 320px;
-            margin: 12px auto 0;
+        .note {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            line-height: 1;
+            color: var(--muted);
         }
-
-        /* ---------- Perforation / tear line ---------- */
-        .perforation {
-            position: relative;
-            height: 0;
-            border-top: 2px dashed #E7D6A3;
-            margin: 22px 0;
-        }
-        .perforation::before,
-        .perforation::after {
-            content: "";
-            position: absolute;
-            top: -12px;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--violet-b);
-        }
-        .perforation::before { left: -32px; }
-        .perforation::after { right: -32px; }
-
-        /* ---------- Group / member info ---------- */
-        .stub { padding: 0 26px 8px; text-align: center; }
-
-        .group-line { font-size: 0.85rem; color: #6B644C; }
-        .group-line strong { color: var(--ink); font-weight: 700; }
-
-       .member-badge {
-    background: var(--paper-dim);
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 7px 16px;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--ink);
-    margin-top: 10px;
-}
-
-.member-badge strong {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #201A3D;
-    letter-spacing: 0.2px;
-}
-
-.member-badge i {
-    color: var(--coral);
-    font-size: 0.95rem;
-}
+        .note i { font-size: 0.75rem; display: flex; }
 
         /* ---------- Features ---------- */
         .features {
-            padding: 4px 26px 26px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 14px 12px;
+            gap: 10px;
+            padding: 18px 24px 22px;
         }
-        .feat-item {
+        .feat {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 0.83rem;
+            padding: 10px 12px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            font-size: 0.85rem;
             font-weight: 500;
-            color: var(--ink);
+            line-height: 1.2;
         }
-        .feat-item i {
-            font-size: 1rem;
-            color: var(--teal);
-            background: var(--paper-dim);
-            width: 32px;
-            height: 32px;
-            display: inline-flex;
+        .feat i {
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            background: rgba(42, 171, 238, 0.1);
+            color: var(--tg-a);
+            font-size: 0.9rem;
+            display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 50%;
-            flex-shrink: 0;
         }
-        .feat-item span { text-align: left; line-height: 1.3; }
 
-        .ads-by {
-            grid-column: 1 / -1;
+        /* ---------- Footer ---------- */
+        .foot {
+            border-top: 1px solid var(--line);
+            padding: 12px 24px;
             text-align: center;
-            margin-top: 4px;
             font-size: 11px;
-            color: #8A8266;
+            color: #94A3B8;
         }
-        .ads-by a { color: var(--gold-deep); font-weight: 600; text-decoration: none; }
+        .foot a { color: var(--tg-a); font-weight: 600; text-decoration: none; }
+
+        @media (max-width: 360px) {
+            .features { grid-template-columns: 1fr; }
+            .name { font-size: 1.3rem; }
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            .ticket, .prize-glow, .join-btn .shine { animation: none; opacity: 1; transform: none; }
+            .card, .live .dot, .join-btn .shine { animation: none; opacity: 1; transform: none; }
         }
     </style>
 </head>
 <body>
-<div class="main">
-    <div class="confetti dot c1"></div>
-    <div class="confetti dot c2"></div>
-    <div class="confetti sq c3"></div>
-    <div class="confetti dot c4"></div>
-    <div class="confetti sq c5"></div>
-    <div class="confetti tri c6"></div>
-    <div class="confetti tri c7"></div>
 
-    <div class="ticket">
-        <div class="ticket-top">
-            <div class="prize-wrap">
-                <div class="prize-glow"></div>
-                <div class="prize-badge">
-                    <span class="num">১০</span>
-                    <span class="unit">টি ল্যাপটপ</span>
-                </div>
-                <i class="fas fa-laptop laptop-mark"></i>
-            </div>
+<main class="card">
+    <header class="head">
+        <div class="avatar"><i class="fas fa-users"></i></div>
+        <h1 class="name">ATZ COMMUNITY</h1>
+        <div class="live"><span class="dot"></span>এখন অ্যাক্টিভ</div>
+        <p class="tagline">মার্কেট আপডেট, আলোচনা আর নতুন কিছু শেখা — সব এক জায়গায়।</p>
+    </header>
 
-            <div class="headline">গিভওয়েতে জয়েন করে জিতে নিন একটি ল্যাপটপ</div>
-        </div>
+    <section class="stats">
+        <div class="stat"><b>১০,২০০+</b><span>সদস্য</span></div>
+        <div class="stat"><b>২৪/৭</b><span>অ্যাক্টিভ</span></div>
+        <div class="stat"><b>ফ্রি</b><span>জয়েন</span></div>
+    </section>
 
-        <div class="cta-wrap">
-            <!-- 🔴 href-এ আসল Telegram invite link বসাও -->
-            <a id="joinTelegramBtn" class="join-btn" href="https://t.me/+bEnO4fk0aa9lZTM9" target="_blank" rel="noopener">
-                <span class="shine"></span>
-                <i class="fab fa-telegram-plane"></i> গিভওয়েতে জয়েন করুন
-            </a>
-            <div class="subtext">গ্রুপে জয়েন করলেই আপনি অংশ নিচ্ছেন আমাদের ১০টি ল্যাপটপ গিভওয়েতে — বিজয়ী নির্বাচন হবে গ্রুপের মধ্যেই।</div>
-        </div>
+    <section class="cta">
+        <!-- Telegram invite link -->
+        <a id="joinTelegramBtn" class="join-btn" href="https://t.me/+bEnO4fk0aa9lZTM9" target="_blank" rel="noopener">
+            <span class="shine"></span>
+            <i class="fab fa-telegram-plane"></i>
+            <span>টেলিগ্রামে জয়েন করুন</span>
+        </a>
+        <div class="note"><i class="fas fa-lock"></i>এক ক্লিকেই Telegram-এ গ্রুপ খুলে যাবে</div>
+    </section>
 
-        <div class="perforation"></div>
+    <section class="features">
+        <div class="feat"><i class="fas fa-chart-line"></i><span>মার্কেট আপডেট</span></div>
+        <div class="feat"><i class="fas fa-comments"></i><span>ডেইলি ডিসকাশন</span></div>
+        <div class="feat"><i class="fas fa-shield-halved"></i><span>প্রাইভেট গ্রুপ</span></div>
+        <div class="feat"><i class="fas fa-clock"></i><span>২৪/৭ কমিউনিটি</span></div>
+    </section>
 
-    <div class="stub">
-    <div class="group-line">গিভওয়েতে দিচ্ছে: <strong>ATZ COMMUNITY</strong></div>
-
-    <div class="member-badge">
-        <i class="fas fa-users"></i>
-        <span><strong>১০,২০০+</strong> সদস্য</span>
-    </div>
-</div>
-
-<div class="perforation"></div>
-
-<div class="features">
-            <div class="feat-item"><i class="fas fa-chart-line"></i><span>মার্কেট আপডেট</span></div>
-            <div class="feat-item"><i class="fas fa-clock"></i><span>২৪/৭ কমিউনিটি</span></div>
-            <div class="feat-item"><i class="fas fa-lock"></i><span>প্রাইভেট গ্রুপ</span></div>
-            <div class="feat-item"><i class="fas fa-gem"></i><span>ডেইলি ডিসকাশন</span></div>
-            <div class="ads-by">Ads By <a href="https://t.me/+mjeIPVeI4iAzYzNl" target="_blank" rel="noopener noreferrer">KDex</a></div>
-        </div>
-    </div>
-</div>
+    <footer class="foot">
+        Ads By <a href="https://t.me/+mjeIPVeI4iAzYzNl" target="_blank" rel="noopener noreferrer">KDex</a>
+    </footer>
+</main>
 
 <script>
-// 🔴 এখানে true/false বদলে Purchase ইভেন্ট চালু/বন্ধ করো
-const TRACK_PURCHASE = true; // true = ইভেন্ট চালু, false = বন্ধ
+// Toggle the Purchase event on/off
+const TRACK_PURCHASE = true; // true = enabled, false = disabled
 
-(function() {
+(function () {
     const btn = document.getElementById('joinTelegramBtn');
     if (!btn) return;
 
-    // বাটনে ক্লিক করলে Purchase ইভেন্ট ফায়ার হবে, তারপর Telegram-এ যাবে
-    btn.addEventListener('click', function(e) {
+    // Fire the Purchase event on click; the link then opens Telegram in a new tab
+    btn.addEventListener('click', function () {
         if (TRACK_PURCHASE && typeof fbq === 'function') {
             fbq('track', 'Purchase', {
                 currency: 'BDT',
                 value: 100
             });
         }
-        // link href দিয়ে স্বাভাবিকভাবেই নতুন ট্যাবে যাবে, popup block-এর ঝামেলা নেই
     });
 })();
 </script>
